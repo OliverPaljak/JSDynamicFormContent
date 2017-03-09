@@ -1,0 +1,93 @@
+<html>
+    <head>
+        <title>JSDynamicFormContent with single form</title>
+    </head>
+    <body>
+        <h1>Form 1</h1>
+        <form>
+            Name: <input name="full-name" type="text" />
+            <br />
+            Favourite image: <input name="favourite_image" type="file" accept="image/*" />
+            <br />
+            Sex: Male <input name="sex" value="male" type="radio" /> Female <input name="sex" value="female" type="radio" />
+            <br />
+            Date: <input name="date" type="date" />
+            <br />
+            Are you a web developer: <input name="web-developer" type="checkbox" />
+            <br />
+            Your favourite web language(s): 
+            <br />
+            <select name="favourite-web-language" multiple="multiple">
+                <option>HTML</option>
+                <option>CSS</option>
+                <option>JavaScript</option>
+            </select>
+            <br />
+            Your favourite color: <input name="favourite-color" type="color" />
+            <br />
+            <textarea name="textarea-comment">Wassup!</textarea>
+            <br />
+            <button type="button">Show my inputs</button>
+            <br />
+            <br />
+            <br />
+        </form>
+        <h1>Form 2</h1>
+        <form>
+            Name: <input name="full-name" type="text" />
+            <br />
+            Favourite image: <input name="favourite_image" type="file" accept="image/*" />
+            <br />
+            Sex: Male <input name="sex" value="male" type="radio" /> Female <input name="sex" value="female" type="radio" />
+            <br />
+            Date: <input name="date" type="date" />
+            <br />
+            Are you a web developer: <input name="web-developer" type="checkbox" />
+            <br />
+            Your favourite web language(s): 
+            <br />
+            <select name="favourite-web-language" multiple="multiple">
+                <option>HTML</option>
+                <option>CSS</option>
+                <option>JavaScript</option>
+            </select>
+            <br />
+            Your favourite color: <input name="favourite-color" type="color" />
+            <br />
+            <textarea name="textarea-comment">Wassup!</textarea>
+            <br />
+            <button type="button">Show my inputs</button>
+            <br />
+            <br />
+            <br />
+        </form>
+        <h2>Form 1 output:</h2>
+        <div id="form-0-output">
+            
+        </div>
+        <h2>Form 2 output:</h2>
+        <div id="form-1-output">
+            
+        </div>
+        
+        <!--Load dynamic-form-content script-->
+        <script src="../dynamic-form-content.js" type="text/javascript"></script>
+        
+        <!--Load or inline custom script-->
+        <script type="text/javascript">
+            var forms = document.getElementsByTagName("form");
+            forms = Array.from(forms);
+            
+            var inputSelectors = "input, select, textarea";
+            
+            for(var form of forms){
+                let submitButton = form.querySelector("button[type='button']");
+                
+                let outputID = "form-" + forms.indexOf(form) + "-output";
+                let outputSection = document.getElementById(outputID);
+                
+                new FormContent(form, inputSelectors, submitButton, outputSection);
+            }
+        </script>
+    </body>
+</html>

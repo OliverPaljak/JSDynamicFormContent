@@ -26,12 +26,10 @@
             <br />
             <textarea name="textarea-comment">Wassup!</textarea>
             <br />
-            <button type="button" id="submit-button">Show my inputs</button>
+            <button type="button" id="submit-button">Console log my inputs</button>
             <br />
             <br />
             <br />
-            <h3>Your inputs are:</h3>
-            <output id="output"></output>
         </form>
         
         <!--Load dynamic-form-content script-->
@@ -39,13 +37,26 @@
         
         <!--Load or inline custom script-->
         <script type="text/javascript">
+            /*
+            * Example of raw form data (data is displayed in console)
+            */
             var form = document.getElementById("form");
             var inputSelectors = "input, textarea, select";
-            var submitButton = document.getElementById("submit-button");
             var outputSection = form.querySelector("#output");
             
-            //Binding FormContent with actual form
-            new FormContent(form, inputSelectors, submitButton, outputSection);
+            //Providing submit button (parameter) an empty value
+            //It won't throw an error
+            var parameterSubmitButton = "";
+            
+            //Creating an accessible variable
+            var formContent = new FormContent(form, inputSelectors, parameterSubmitButton, outputSection);
+            
+            var realSubmitButton = form.querySelector("#submit-button");
+            
+            realSubmitButton.onclick = function(){
+                console.table(formContent.getFormData());
+            };
+            
         </script>
     </body>
 </html>

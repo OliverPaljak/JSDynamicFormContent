@@ -80,12 +80,14 @@
             
             var inputSelectors = "input, select, textarea";
             
+            //Looping through every form
             for(var form of forms){
                 let submitButton = form.querySelector("button[type='button']");
                 
                 let outputID = "form-" + forms.indexOf(form) + "-output";
                 let outputSection = document.getElementById(outputID);
                 
+                //Binding FormContent with actual form
                 new FormContent(form, inputSelectors, submitButton, outputSection);
             }
         </script>

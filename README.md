@@ -28,7 +28,7 @@ You can actually not display the output by providing the `submitButton` paramete
 
 `submitButton` isn't fatal getting data from the form. Look at the raw example.
 ### Examples
-1. [Single form](https://raw.githubusercontent.com/OliverPaljak/JSDynamicFormContent/master/examples/dynamic-single-form-content-example.html) - [Source](https://github.com/OliverPaljak/JSDynamicFormContent/blob/master/examples/dynamic-single-form-content-example.html)
+1. [Single form](https://htmlpreview.github.io/?https://raw.githubusercontent.com/OliverPaljak/JSDynamicFormContent/master/examples/dynamic-single-form-content-example.html) - [Source](https://github.com/OliverPaljak/JSDynamicFormContent/blob/master/examples/dynamic-single-form-content-example.html)
 2. [Multiple forms](http://htmlpreview.github.io/?https://raw.githubusercontent.com/OliverPaljak/JSDynamicFormContent/master/examples/dynamic-multiple-form-content-example.html) - [Source](https://github.com/OliverPaljak/JSDynamicFormContent/blob/master/examples/dynamic-multiple-form-content-example.html)
 3. [Raw data](http://htmlpreview.github.io/?https://raw.githubusercontent.com/OliverPaljak/JSDynamicFormContent/master/examples/dynamic-raw-form-content-example.html) - [Source](https://github.com/OliverPaljak/JSDynamicFormContent/blob/master/examples/dynamic-raw-form-content-example.html)
 

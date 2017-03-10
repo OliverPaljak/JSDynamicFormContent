@@ -16,7 +16,9 @@ JSDynamicFormContent loops through every input element in provided form and disp
 
 ## How to use JSDynamicFormContent?
 **First**, you need a form of course. It can contain whatever inputs you want.
+
 **Next**, add JSDynamicFormContent to your website (`<script src="https://raw.githubusercontent.com/OliverPaljak/JSDynamicFormContent/master/dynamic-form-content.min.js" type="text/javascript"></script>`)
+
 **Thirdly**, add your custom script which binds the form with JSDynamicFormContent (`new FormContent(yourForm, inputSelectors, submitButton, outputSection);`)
 * inputSelectors - Input elements' (jQuery like) selector - multiple selectors separate with comma
 * submitButton - Submit button HTML element (can be outside the form)

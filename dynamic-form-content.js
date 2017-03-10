@@ -139,9 +139,9 @@ class FormContent{
     }
 
     /**
-     * Get form content/data which is checked and formatted
+     * Get form content/data which is formatted
      *
-     * @return {string} Form content
+     * @return {string} Formatted form content
      * @since 1.0.0
      */
     getFormattedFormContent(){
@@ -149,51 +149,69 @@ class FormContent{
 
         var formData = this.getFormData();
 
-        var noNameCounter = 0;
-
-        for(var input of formData){
-            var printValue = input.data || input.value || this.emptyValueMessage;
-            var printName = input.name || "no_name_element_" + noNameCounter;
-
-            if(!input.name){
-                noNameCounter++;
-            }
-
-            formContent += "<b>" + printName + "</b>: " + printValue + "<br />";
+        for(var input in formData){
+            formContent += "<b>" + input + "</b>: " + formData[input] + "<br />";
         }
 
         return formContent;
     }
+    
+    /**
+     * Get raw form data
+     *
+     * @return {json} Form data
+     * @since 1.0.0
+     */
+    getFormData(){
+        var formData = {};
+        
+        var noNameCounter = 0;
+        
+        var formInputs = this.getFormInputs();
+        
+        for(var input of formInputs){
+            let inputName = input.name || "no_name_element_" + noNameCounter;
+            let inputValue = input.data || input.value || this.emptyValueMessage;
+            
+            if(!input.name){
+                noNameCounter++;
+            }
+            
+            formData[inputName] = inputValue;
+        }
+        
+        return formData;
+    }
 
     /**
-     * Get all the inputs with value inside the form (form data)
+     * Get all the form input elements
      * 
      * @return {Array} Inputs and values (form data)
      * @since 1.0.0
      */
-    getFormData(){
-        var formData = [];
+    getFormInputs(){
+        var formInputs = [];
 
         for(var input of this.getInputElements()){
             if(!this.disabledElements.includes(input.tagName.toLowerCase()) && !this.disabledElements.includes(input.type) && !this.disabledElements.includes(input)){
                 if(input.type === "radio"){
                     if(input.checked){
-                        formData.push(input);
+                        formInputs.push(input);
                     }
                 }else if(input.type === "checkbox"){
                     input.value = (input.checked) ? true : false;
-                    formData.push(input);
+                    formInputs.push(input);
                 }else if(input.multiple){
-                    formData.push(this.getMultipleInputElement(input));
+                    formInputs.push(this.getMultipleInput(input));
                 }else if(input.value || input.innerHTML){
-                    formData.push(input);
+                    formInputs.push(input);
                 }else{
-                    formData.push(input);
+                    formInputs.push(input);
                 }
             }
         }
 
-        return formData;
+        return formInputs;
     }
 
     /**
@@ -203,7 +221,7 @@ class FormContent{
      * @return {HTMLInputElement} Input instance
      * @since 1.0.0
      */
-    getMultipleInputElement(multipleInput){
+    getMultipleInput(multipleInput){
         var inputInstance = document.createElement("input");
         inputInstance.name = multipleInput.name;
 

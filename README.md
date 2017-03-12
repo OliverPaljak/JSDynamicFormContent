@@ -26,7 +26,7 @@ JSDynamicFormContent loops through every input element in provided form and disp
 
 You can actually not display the output by providing the `submitButton` or `ouputSection` parameter empty value (`""` or `"null"`). It just won't fire the print function.
 
-`submitButton` and `ouputSection` isn't fatal getting data from the form. Look at the raw example.
+`submitButton` and `ouputSection` aren't fatal getting data from the form. Look at the raw example.
 ### Examples
 1. [Single form](https://htmlpreview.github.io/?https://raw.githubusercontent.com/OliverPaljak/JSDynamicFormContent/master/examples/dynamic-single-form-content-example.html) - [Source](https://github.com/OliverPaljak/JSDynamicFormContent/blob/master/examples/dynamic-single-form-content-example.html)
 2. [Multiple forms](http://htmlpreview.github.io/?https://raw.githubusercontent.com/OliverPaljak/JSDynamicFormContent/master/examples/dynamic-multiple-form-content-example.html) - [Source](https://github.com/OliverPaljak/JSDynamicFormContent/blob/master/examples/dynamic-multiple-form-content-example.html)

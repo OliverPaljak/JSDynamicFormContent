@@ -42,14 +42,14 @@
             */
             var form = document.getElementById("form");
             var inputSelectors = "input, textarea, select";
-            var outputSection = form.querySelector("#output");
             
-            //Providing submit button (parameter) an empty value
+            //Providing submit button and output section (parameter) an empty value
             //It won't throw an error
             var parameterSubmitButton = "";
+            var parameterOutputSection = null;
             
             //Creating an accessible variable
-            var formContent = new FormContent(form, inputSelectors, parameterSubmitButton, outputSection);
+            var formContent = new FormContent(form, inputSelectors, parameterSubmitButton, parameterOutputSection);
             
             var realSubmitButton = form.querySelector("#submit-button");
             

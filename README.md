@@ -38,4 +38,4 @@ You can contact me through my email at oliver.paljak@ansiveeb.ee or you can open
 ## License
 It is (un)licensed under unlicense - so no worries about that.
 
-But if you have some worries for some reasons then refer to unlicense.org
+But if you have some worries for some reasons then refer to [unlicense.org](http://unlicense.org/)

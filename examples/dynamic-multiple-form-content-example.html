@@ -71,21 +71,21 @@
         </div>
         
         <!--Load dynamic-form-content script-->
-        <script src="https://raw.githubusercontent.com/OliverPaljak/JSDynamicFormContent/master/dynamic-form-content.min.js" type="text/javascript"></script>
+        <script src="https://raw.githubusercontent.com/OliverPaljak/JSDynamicFormContent/master/dynamic-form-content-prod.min.js" type="text/javascript"></script>
         
         <!--Load or inline custom script-->
         <script type="text/javascript">
             var forms = document.getElementsByTagName("form");
-            forms = Array.from(forms);
             
             var inputSelectors = "input, select, textarea";
             
             //Looping through every form
-            for(var form of forms){
-                let submitButton = form.querySelector("button[type='button']");
+            for(var i in forms){
+                var form = forms[i];
+                var submitButton = form.querySelector("button[type='button']");
                 
-                let outputID = "form-" + forms.indexOf(form) + "-output";
-                let outputSection = document.getElementById(outputID);
+                var outputId = "form-" + i + "-output";
+                var outputSection = document.getElementById(outputId);
                 
                 //Binding FormContent with actual form
                 new FormContent(form, inputSelectors, submitButton, outputSection);

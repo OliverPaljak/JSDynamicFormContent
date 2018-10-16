@@ -1,6 +1,6 @@
 # JSDynamicFormContent
 JSDynamicFormContent is a pure JavaScript library, which gets dynamically form data.
-JSDynamicFormContent doesn't use AJAX or other 'server-side' technologies.
+JSDynamicFormContent doesn't use AJAX or other server-side technologies.
 
 ## What are JSDynamicFormContent current features?
 JSDynamicFormContent:

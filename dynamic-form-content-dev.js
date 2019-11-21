@@ -4,7 +4,7 @@
  *
  * JSDynamicFormContent is released under Unlicense. For more information, please check the (UN)LICENSE.md file or refer to <http://unlicense.org>
  *
- * For how to's and examples visit <https://>
+ * For how to's and examples visit <https://github.com/OliverPaljak/JSDynamicFormContent>
  */
 
 

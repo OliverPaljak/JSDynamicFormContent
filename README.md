@@ -33,7 +33,7 @@ You can actually not display the output by providing the `submitButton` or `oupu
 3. [Raw data](http://htmlpreview.github.io/?https://raw.githubusercontent.com/OliverPaljak/JSDynamicFormContent/master/examples/dynamic-raw-form-content-example.html) - [Source](https://github.com/OliverPaljak/JSDynamicFormContent/blob/master/examples/dynamic-raw-form-content-example.html)
 
 ## Bugs or offers
-You can contact me through my email at oliver.paljak@ansiveeb.ee or you can open up an issue on github. Always looking to improve my projects :) 
+Open up an issue on github. Always looking to improve my projects :) 
 
 ## License
 It is (un)licensed under unlicense - so no worries about that.
